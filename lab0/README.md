@@ -33,4 +33,4 @@ This module was tested on kernel version Linux 5.14.8-arch1-1.
 ```shell
 uname -r -s -v
 ```
-Rum this command to check the kernel release version.
+Run this command to check the kernel release version.
