@@ -1,20 +1,21 @@
 # A Kernel Seedling
-TODO: intro
+This module adds the file /proc/count, which contains the current number of running processes on the machine.
 
 ## Building
 ```shell
-TODO: cmd for build
+Run the command "make" from the command line to build the module.
+Then run the command "sudo insmod proc_count.ko" to load the module into the kernel.
 ```
 
 ## Running
 ```shell
-TODO: cmd for running binary
+Run the command "cat /proc/count", which prints out the current number of running processes on the machine.
 ```
 TODO: results?
 
 ## Cleaning Up
 ```shell
-TODO: cmd for cleaning the built binary
+Run the command "sudo rmmod proc_count" in order to remove the module.
 ```
 
 ## Testing
