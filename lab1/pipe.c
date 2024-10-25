@@ -7,6 +7,7 @@
 
 int main(int argc, char *argv[])
 {
+  int final_exit_status = 0;
   // ./pipe counts as one  argument
   if (argc <= 1) {
     perror("ERROR: must provide at least one argument");
@@ -36,8 +37,9 @@ int main(int argc, char *argv[])
       // parent must wait for child to finish so that no orphan process
       int status;
       waitpid(pid, &status, 0);
-      if (WEXITSTATUS(status) != 0) {
+      if (WIFEXITED(status) && WEXITSTATUS(status) != 0) {
 	perror("ERROR: Child process did not exit correclty");
+	return WEXITSTATUS(status);
       }
     }
 
@@ -124,10 +126,11 @@ int main(int argc, char *argv[])
       waitpid(child_pids[j], &status, 0);
       if (WEXITSTATUS(status) != 0) {
 	perror("ERROR: A child process did not exit correclty");
+	final_exit_status = WEXITSTATUS(status);
       }
     }
 
     free(child_pids);
   }
-  return 0;
+  return final_exit_status;
 }
