@@ -6,7 +6,7 @@ This program replicates the pipe (|) operator in shells by executing a series of
 
 ## Building
 
-Build the program by running the following command in the directory with pipe.c and Makefile
+Build the program by running the following command in the directory with pipe.c and Makefile.
 ``` shell
 make
 ```
@@ -37,7 +37,7 @@ test_lab1.py
 
 ## Cleaning up
 
-Clean up the binary files by running the following command in the same directory where you ran "make"
+Clean up the binary files by running the following command in the same directory where you ran "make".
 ``` shell
 make clean
 ```
