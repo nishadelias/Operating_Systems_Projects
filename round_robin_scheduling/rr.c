@@ -168,8 +168,6 @@ int main(int argc, char *argv[])
 
   /* Your code here */
 
-  printf("my code starting");
-
   struct process *p;
   
   int time = 0;
